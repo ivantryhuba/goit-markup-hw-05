@@ -155,6 +155,10 @@ body {
   padding-bottom: 32px;
 
   color: var(--pri-text-color);
+
+  transition-property: color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .nav-list .link.current {
@@ -203,6 +207,10 @@ body {
   padding-bottom: 32px;
 
   color: var(--sec-text-color);
+
+  transition-property: color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .contacts-header .icon {
@@ -299,6 +307,10 @@ body {
   border-radius: 50%;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .join-social .icon {
@@ -369,10 +381,13 @@ body {
 
   color: #ffffff;
   background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+  
   border: transparent;
   border-radius: 4px;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 
   cursor: pointer;
 }
@@ -380,6 +395,7 @@ body {
 .hero-button:hover,
 .hero-button:focus {
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Особенности */
@@ -521,6 +537,12 @@ body {
   align-items: center;
   padding: 12px;
   color: var(--pri-icon-color);
+
+  border-radius: 50%;
+
+  transition-property: color, background-color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .team-social .icon {
@@ -529,8 +551,6 @@ body {
 
 .team-social .link:hover,
 .team-social .link:focus {
-  border-radius: 50%;
-
   color: var(--sec-icon-color);
   background-color: var(--accent-color);
 }
@@ -568,10 +588,15 @@ body {
 
   width: 100%;
   height: 100%;
+
+  color: var(--pri-icon-color);
+
   border: 1px solid var(--pri-icon-color);
   border-radius: 4px;
 
-  color: var(--pri-icon-color);
+  transition-property: color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .clients-list .icon {
@@ -674,6 +699,10 @@ body {
 
   color: var(--pri-text-color);
   background-color: var(--sec-background-color);
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .filter-btn:hover,
@@ -707,6 +736,10 @@ body {
 
 .progects .link {
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .progects .link:hover,
