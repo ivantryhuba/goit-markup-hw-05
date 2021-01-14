@@ -157,7 +157,24 @@ body {
   color: var(--pri-text-color);
 }
 
-.nav-list .link.current,
+.nav-list .link.current {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.nav-list .link.current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  content: "";
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .nav-list .link:hover,
 .nav-list .link:focus {
   color: var(--accent-color);
