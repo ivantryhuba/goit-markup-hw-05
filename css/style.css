@@ -20,6 +20,10 @@ html {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 /* ------Переменные------ */
 :root {
   /* Основные цвета текста */
@@ -381,7 +385,7 @@ body {
 
   color: #ffffff;
   background-color: var(--accent-color);
-  
+
   border: transparent;
   border-radius: 4px;
 
@@ -471,6 +475,36 @@ body {
 
 .we-do-list > .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.we-do-card {
+  position: relative;
+  width: 100%;
+}
+
+
+
+.we-do-card .label {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.we-do-card .title {
+  padding: 27px 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 /* Наша команда */
@@ -622,7 +656,6 @@ body {
 
   opacity: 1;
   transition: opacity var(--time-duration) var(--cubic);
-
 }
 
 .backdrop.is-hidden {
@@ -630,7 +663,7 @@ body {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal{
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.75) rotate(90deg);
 }
 
