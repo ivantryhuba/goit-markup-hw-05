@@ -168,7 +168,7 @@ body {
 
 .nav-list .link.current::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 
   content: "";
@@ -619,6 +619,10 @@ body {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity var(--time-duration) var(--cubic);
+
 }
 
 .backdrop.is-hidden {
@@ -626,11 +630,14 @@ body {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(0.75) rotate(90deg);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   width: 528px;
   height: 581px;
@@ -639,6 +646,9 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  transition: transform var(--time-duration) var(--cubic);
 }
 
 .close-button {
@@ -655,6 +665,10 @@ body {
   background-color: var(--pri-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition-property: color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 
   cursor: pointer;
 }
