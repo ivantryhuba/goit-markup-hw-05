@@ -335,7 +335,7 @@ body {
   background-color: var(--hero-background-color);
 }
 
-.overlay {
+.hero .overlay {
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
@@ -481,8 +481,6 @@ body {
   position: relative;
   width: 100%;
 }
-
-
 
 .we-do-card .label {
   position: absolute;
@@ -790,12 +788,46 @@ body {
 }
 
 .progects .link:hover,
-.progects .link:focus {
+.progects .link:focus  {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.progect-text {
+.progect-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.progect-thumb .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+  transition: transform var(--time-duration) var(--cubic);
+
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.progects .link:hover .progect-thumb .overlay,
+.progects .link:focus .progect-thumb .overlay{
+  transform: translateY(0);
+}
+
+.progect-thumb .text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+.progect-label {
   padding: 20px 24px;
 }
 
